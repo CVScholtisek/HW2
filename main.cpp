@@ -15,6 +15,7 @@ using namespace std;
 void InputNames(vector<string> & names);
 bool DoesNameExist(const string & nameToFind, const vector<string> & names);\
 void PrintNames(const vector<string> & names);
+void NameCount(const vector<string> & names);
 
 // main function
 
@@ -30,6 +31,8 @@ int main(int argc, char **argv) {
     DoesNameExist(nameToFind, names);
 
     PrintNames(names);
+
+    NameCount(names);
 
     return 0;
 }
@@ -60,9 +63,19 @@ bool DoesNameExist(const string & nameToFind, const vector<string> & names){
     return false;
 }
 
+// Prints names list
+
 void PrintNames(const vector<string> & names){
+    cout << "Names List:" << endl;
     for (int i = 0; i < names.size(); i++){
-        cout << "Names List:" << endl;
         cout << names[i] << endl;
+    }
+}
+
+// Counts length of each name
+
+void NameCount(const vector<string> & names){
+    for (int i = 0; i < names.size(); i++){
+        cout << names[i] << " is " << names[i].length() << " characters long" << endl;
     }
 }
