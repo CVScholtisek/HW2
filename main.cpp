@@ -1,7 +1,8 @@
 /* HW2
  * Clint Scholtisek CS F201 FXA
  * Jon Genetti
- * Takes three inputs and prints them in a line*/
+ * Takes ten name inputs and lets you serach for a specific name, prints the list as a whole,
+ * and counts the length of each name*/
 
 #include <iostream>
 #include <vector>
@@ -13,7 +14,7 @@ using namespace std;
 // function prototypes
 
 void InputNames(vector<string> & names);
-bool DoesNameExist(const string & nameToFind, const vector<string> & names);\
+bool DoesNameExist(const string & nameToFind, const vector<string> & names);
 void PrintNames(const vector<string> & names);
 void NameCount(const vector<string> & names);
 
