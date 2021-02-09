@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Clinterpottrmus/CLionProjects/untitled3/hw2.h">
+			<Option target="untitled3"/>
+		</Unit>
 		<Unit filename="C:/Users/Clinterpottrmus/CLionProjects/untitled3/main.cpp">
 			<Option target="untitled3"/>
 		</Unit>
