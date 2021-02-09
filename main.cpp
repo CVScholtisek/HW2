@@ -10,9 +10,13 @@
 
 using namespace std;
 
-void InputNames(vector<string> & names);
+// function prototypes
 
-bool DoesNameExist(const string & nameToFind, const vector<string> & names);
+void InputNames(vector<string> & names);
+bool DoesNameExist(const string & nameToFind, const vector<string> & names);\
+void PrintNames(const vector<string> & names);
+
+// main function
 
 int main(int argc, char **argv) {
     vector<string> names;
@@ -25,8 +29,12 @@ int main(int argc, char **argv) {
 
     DoesNameExist(nameToFind, names);
 
+    PrintNames(names);
+
     return 0;
 }
+
+// Gets input for names vector
 
 void InputNames(vector<string> & names){
     for (int i = 0; i < 10; i++) {
@@ -37,15 +45,24 @@ void InputNames(vector<string> & names){
     }
 }
 
+// Checks if name exists in names vector and returns boolean value
+
 bool DoesNameExist(const string & nameToFind, const vector<string> & names){
     for (int i = 0; i < names.size(); i++){
         if (names[i] == nameToFind) {
-            cout << "true";
+            cout << "true" << endl;
             return true;
         } else{
 
         }
     }
-    cout << "false";
+    cout << "false" << endl;
     return false;
+}
+
+void PrintNames(const vector<string> & names){
+    for (int i = 0; i < names.size(); i++){
+        cout << "Names List:" << endl;
+        cout << names[i] << endl;
+    }
 }
